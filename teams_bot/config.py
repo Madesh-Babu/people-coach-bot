@@ -4,9 +4,15 @@
 
 import os
 
-class DefaultConfig:
-    """ Bot Configuration """
 
-    PORT = 3978
+class DefaultConfig:
+    """Bot Configuration"""
+
+    PORT = int(os.environ.get("PORT", 3978))
     APP_ID = os.environ.get("MicrosoftAppId", "")
     APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "")
+    BACKEND_BASE_URL = os.environ.get(
+        "BACKEND_BASE_URL",
+        "https://gqf4f2pds1.execute-api.eu-central-1.amazonaws.com/dev",
+    )
+    DEFAULT_USER_ID = os.environ.get("DEFAULT_USER_ID", "jitendrakushwah@bitcot.com")

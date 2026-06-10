@@ -6,35 +6,35 @@ debug started web socket client
 debug started web socket client
 log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
 log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(10166) complete
+log wait-on(20100) Timed out waiting for: http://127.0.0.1:3978/api/messages; exiting with error
+debug Telemetry: agents-playground-server/error {"cleanProperties":{"stack":"\"Error: Timed out waiting for: http:<REDACTED: user-file-path>:3978<REDACTED: user-file-path>:2:1497581\\n    at doInnerSub (<REDACTED: user-file-path>:2:2727441)\\n    at outerNext (<REDACTED: user-file-path>:2:2727293)\\n    at OperatorSubscriber._this._next (<REDACTED: user-file-path>:2:2843161)\\n    at Subscriber.next (<REDACTED: user-file-path>:5:1001770)\\n    at AsyncAction.<anonymous> (<REDACTED: user-file-path>:5:1072339)\\n    at AsyncAction._execute (<REDACTED: user-file-path>:2:384010)\\n    at AsyncAction.execute (<REDACTED: user-file-path>:2:383783)\\n    at AsyncScheduler.flush (<REDACTED: user-file-path>:5:243755)\\n    at listOnTimeout (node:internal/timers:605:17)\"","message":"\"Timed out waiting for: http:<REDACTED: user-file-path>:3978/api/messages\""}}
+
 log Events recording disabled.
 debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
 
 debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"Asia/Calcutta\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"d8a58633-af93-4707-aa8b-ffbf9659c5cc","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+debug Telemetry: agents-playground-server/error {"cleanProperties":{"stack":"\"Error: connect ECONNREFUSED 127.0.0.1:3978\\n    at exports.UserBotError (<REDACTED: user-file-path>:2:1255233)\\n    at InstallationUserBotAccessor.handleAxiosError (<REDACTED: user-file-path>:2:2235395)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\\n    at async InstallationUserBotAccessor.sendActivity (<REDACTED: user-file-path>:2:2234657)\\n    at async InstallationUserBotAccessor.sendInstallationUpdateActivity (<REDACTED: user-file-path>:2:2179691)\"","message":"\"connect ECONNREFUSED 127.0.0.1:3978\"","code":"\"UserBotError\""}}
 
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"d8a58633-af93-4707-aa8b-ffbf9659c5cc","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
+log InternalServiceError: connect ECONNREFUSED 127.0.0.1:3978
+    at exports.UserBotError (/home/bitcot/.nvm/versions/node/v25.2.1/lib/node_modules/@microsoft/teams-app-test-tool/dist/index.js:2:1255233)
+    at InstallationUserBotAccessor.handleAxiosError (/home/bitcot/.nvm/versions/node/v25.2.1/lib/node_modules/@microsoft/teams-app-test-tool/dist/index.js:2:2235395)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async InstallationUserBotAccessor.sendActivity (/home/bitcot/.nvm/versions/node/v25.2.1/lib/node_modules/@microsoft/teams-app-test-tool/dist/index.js:2:2234657)
+    at async InstallationUserBotAccessor.sendInstallationUpdateActivity (/home/bitcot/.nvm/versions/node/v25.2.1/lib/node_modules/@microsoft/teams-app-test-tool/dist/index.js:2:2179691) {
+  code: 'UserBotError',
+  innerHttpError: undefined
+}
+debug Telemetry: agents-playground-server/error {"cleanProperties":{"stack":"\"Error: connect ECONNREFUSED 127.0.0.1:3978\\n    at exports.UserBotError (<REDACTED: user-file-path>:2:1255233)\\n    at ConversationUpdateUserBotAccessor.handleAxiosError (<REDACTED: user-file-path>:2:2235395)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\\n    at async ConversationUpdateUserBotAccessor.sendActivity (<REDACTED: user-file-path>:2:2234657)\\n    at async ConversationUpdateUserBotAccessor.sendInstallationMemberAddedActivity (<REDACTED: user-file-path>:5:331700)\"","message":"\"connect ECONNREFUSED 127.0.0.1:3978\"","code":"\"UserBotError\""}}
 
-debug stopping web socket client
-debug stopping web socket client
-debug started web socket client
-debug started web socket client
-log Waiting for connection of endpoint: http://127.0.0.1:3978/api/messages
-log waiting for 1 resources: http://127.0.0.1:3978/api/messages
-log wait-on(10166) complete
-log Events recording disabled.
-debug Telemetry: agents-playground-server/eventsRecording {"cleanProperties":{"enabled":"false"}}
+log InternalServiceError: connect ECONNREFUSED 127.0.0.1:3978
+    at exports.UserBotError (/home/bitcot/.nvm/versions/node/v25.2.1/lib/node_modules/@microsoft/teams-app-test-tool/dist/index.js:2:1255233)
+    at ConversationUpdateUserBotAccessor.handleAxiosError (/home/bitcot/.nvm/versions/node/v25.2.1/lib/node_modules/@microsoft/teams-app-test-tool/dist/index.js:2:2235395)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async ConversationUpdateUserBotAccessor.sendActivity (/home/bitcot/.nvm/versions/node/v25.2.1/lib/node_modules/@microsoft/teams-app-test-tool/dist/index.js:2:2234657)
+    at async ConversationUpdateUserBotAccessor.sendInstallationMemberAddedActivity (/home/bitcot/.nvm/versions/node/v25.2.1/lib/node_modules/@microsoft/teams-app-test-tool/dist/index.js:5:331700) {
+  code: 'UserBotError',
+  innerHttpError: undefined
+}
+debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"message","conversationId":"a874ed42-e393-4e55-9bce-d84f6cd6ccec","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
 
-debug Telemetry: agents-playground-server/getConfig {"cleanProperties":{"internalConfig":"{\"locale\":\"en-US\",\"localTimezone\":\"Asia/Calcutta\",\"channelId\":\"msteams\",\"debugConfig\":{\"eventsRecordingEnabled\":false}}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"d8a58633-af93-4707-aa8b-ffbf9659c5cc","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"d8a58633-af93-4707-aa8b-ffbf9659c5cc","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"installationUpdate","conversationId":"0e25a794-a252-42ba-9587-c2bfff7a6691","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug Telemetry: agents-playground-server/sendActivity {"cleanProperties":{"activityType":"conversationUpdate","conversationId":"0e25a794-a252-42ba-9587-c2bfff7a6691","headers":"{\"x-ms-agents-playground\":\"true\"}"}}
-
-debug stopping web socket client
-debug stopping web socket client
