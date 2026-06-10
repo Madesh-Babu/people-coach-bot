@@ -16,3 +16,4 @@ class DefaultConfig:
         "https://gqf4f2pds1.execute-api.eu-central-1.amazonaws.com/dev",
     )
     DEFAULT_USER_ID = os.environ.get("DEFAULT_USER_ID", "jitendrakushwah@bitcot.com")
+    GATEWAY_API_KEY = os.environ.get("GATEWAY_API_KEY", "")
